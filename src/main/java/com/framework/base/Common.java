@@ -1,6 +1,5 @@
 package com.framework.base;
 
-import com.pageObjects.AppPageObjects;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
@@ -15,10 +14,9 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Properties;
-import static com.framework.base.Base.driver;
 
 //Commonly used methods are stored here (e.g. Scroll, Screenshot)
-public class Common {
+public class Common extends Base {
 
     //Capturing a screenshot and saving it in the test-output/Screenshots folder in the project. It is also logged to the Emailable-Report in test-output
     public static void getScreenshot(String testName) throws IOException {
@@ -206,4 +204,20 @@ public class Common {
         return false;
     }
 
+    //Clicking on one element and dragging to another element
+    public static void clickAndDrag(WebElement startingElement, WebElement endingElement){
+
+        //Getting the center of the starting object and ending object and setting coordinates
+        int startX = startingElement.getLocation().getX() + (startingElement.getSize().getWidth() / 2);
+        int startY = startingElement.getLocation().getY() + (startingElement.getSize().getHeight() / 2);
+        int endX = endingElement.getLocation().getX() + (endingElement.getSize().getWidth() / 2);
+        int endY = endingElement.getLocation().getY() + (endingElement.getSize().getHeight() / 2);
+
+        //Using TouchAction to press, hold, move to a second object and release based on provided coordinates
+        new TouchAction(driver)
+                .press(PointOption.point(startX,startY))
+                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000)))
+                .moveTo(PointOption.point(endX, endY))
+                .release().perform();
+    }
 }

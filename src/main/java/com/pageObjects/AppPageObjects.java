@@ -116,4 +116,60 @@ public class AppPageObjects extends Base {
 		//Returning the element for use in testing
 		return element;
 	}
+
+	//Identifying the element based on xpath text provided by the data provider
+	public static WebElement getTextViewByButtonText(String text){
+		//Providing the xpath as a string
+		String xpath = "//android.widget.TextView[@text='"+text+"']";
+		//Waiting for the presence of the desired element
+		common.waitForElement(driver.findElementByXPath(xpath), 10, 1);
+		//Creating a Web Element object
+		WebElement element = driver.findElementByXPath(xpath);
+		//Returning the element for use in testing
+		return element;
+	}
+
+	public static WebElement getDateWidgetsButton(){
+		//Providing the xpath as a string
+		String xpath = "//android.widget.TextView[@text='Date Widgets']";
+		//Waiting for the presence of the desired element
+		common.waitForElement(driver.findElementByXPath(xpath), 10, 1);
+		//Creating a Web Element object
+		WebElement element = driver.findElementByXPath(xpath);
+		//Returning the element for use in testing
+		return element;
+	}
+
+	public static WebElement getInlineButton(){
+		//Providing the xpath as a string
+		String xpath = "//android.widget.TextView[@text='2. Inline']";
+		//Waiting for the presence of the desired element
+		common.waitForElement(driver.findElementByXPath(xpath), 10, 1);
+		//Creating a Web Element object
+		WebElement element = driver.findElementByXPath(xpath);
+		//Returning the element for use in testing
+		return element;
+	}
+
+	public static WebElement getAnalogClockNumber(int number){
+		//Providing the xpath as a string
+		String xpath = "//*[@content-desc="+number+"]";
+		//Waiting for the presence of the desired element
+		common.waitForElement(driver.findElementByXPath(xpath), 10, 1);
+		//Creating a Web Element object
+		WebElement element = driver.findElementByXPath(xpath);
+		//Returning the element for use in testing
+		return element;
+	}
+
+	public static WebElement getDigitalClockText(String number){
+		//Providing the xpath as a string
+		String xpath = "//android.widget.TextView[@text="+number+"]";
+		//Waiting for the presence of the desired element
+		common.waitForElement(driver.findElementByXPath(xpath), 10, 1);
+		//Creating a Web Element object
+		WebElement element = driver.findElementByXPath(xpath);
+		//Returning the element for use in testing
+		return element;
+	}
 }

@@ -1,8 +1,11 @@
 package App;
 
 import java.net.MalformedURLException;
+import java.util.List;
+
 import com.framework.base.Base;
 import com.framework.base.Common.Direction;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.*;
 
@@ -10,6 +13,42 @@ import org.testng.annotations.*;
 public class LandingPageTests extends Base {
 
     //TODO test screenshots
+
+    @Test (description = "Checking that all buttons are present on the landing page", dataProvider = "LandingPageObjects")
+    public void checkLandingPageObjects( String expectedText){
+        //This test checks for the presence of all the elements we expect to be on the landing page. In this case, the header and buttons.
+        //We are looking for the presence of specific elements based on the text field of the object
+        //This test is looped for every {data set} in the data provider
+
+        //I created the getTextViewByButtonText method so that it can be used anywhere in the code to get an element based on the text field
+        WebElement element = android.getTextViewByButtonText(expectedText);
+        //Using assertions to confirm the element is displayed
+        softAssert.assertTrue(element.isDisplayed(), ""+expectedText+" button is present");
+        softAssert.assertAll();
+    }
+
+    @DataProvider(name="LandingPageObjects")
+    public static Object[][] getData()
+    {
+        //Below you can see multiple data sets, which will run through the test multiple times
+        Object[][] data=new Object[][]
+                {
+                        {"API Demos"},
+                        {"Accessibility"},
+                        {"Animation"},
+                        {"App"},
+                        {"Content"},
+                        {"Graphics"},
+                        {"Media"},
+                        {"NFC"},
+                        {"OS"},
+                        {"Preference"},
+                        {"Text"},
+                        {"Views"}
+                };
+        //Returning the data object
+        return data;
+    }
 
     @Test (groups= {"smoke"}, enabled = true, dataProvider= "ClickTestData", description = "Both buttons on the home screen lead to the correct page")
     public void checkButtonFunction(String buttonName, String desc, String buttonText, String message) throws InterruptedException, MalformedURLException {

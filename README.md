@@ -4,6 +4,8 @@
 
 ## Branching 
 
+Every branch has a specific README file that I recommend looking at
+
 ### 'Empty Frameworks' with a placeholder test: 
 #### androidFramework
 For testing on Android Apps, Hybrid Android Apps and Android Mobile Browsers (Chrome, Samsung Internet Browser) <br>

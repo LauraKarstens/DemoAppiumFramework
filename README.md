@@ -9,7 +9,7 @@
 *iOSFramework* - For testing on iOS Apps, Hybrid iOS Apps and Mobile Safari <br>
 *webFramework* - For testing on desktop browsers (Chrome, Safari, Edge, Firefox) <br>
 
-##### Example Test Frameworks with several test examples. Also playform specific
+#### Example Test Frameworks with several test examples. Also playform specific
 The following branches all contain several example tests. The tests include a variety of interactions with different kinds of applications. The tests included on each branch are listed. It may be worth checking out the web examples (even if you are automating mobile) because something about the test logic could be helpful. 
 
 *androidTesting* <br>

@@ -69,8 +69,6 @@ public class Base {
         //EXPERIMENTAL and not needed potentially
         capabilities.setCapability("appium:chromeOptions", ImmutableMap.of("w3c", false));
 
-        //TODO example of interacting with existing apps
-
         //Setting up the driver
         String address=(String) prop.get("IP");
         driver = new AppiumDriver(new URL(address), capabilities);

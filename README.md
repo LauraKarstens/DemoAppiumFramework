@@ -5,6 +5,8 @@
 This branch includes the appium framework for Android Apps and Browsers. Please see the README on the main branch for installation and setup instructions: 
 [Here](https://github.com/madison-vincent/DemoAppiumFramework#readme)
 
+[Here](https://github.com/madison-vincent/DemoAppiumFramework/tree/androidTesting) is a branch that has many example tests and interactions for Android
+
 ### Project Outline
 
 [main > java > com > framework > base] This is where the majority of the framework lives. The Base class is where we set up the Appium Driver and give Appium all of the settings it needs to run automation on a mobile app. The BrowserBase class is where we set up the Driver and settings for mobile browsers. The Common class contains methods that are commonly used in the project, but not specific to a certain area or class. 

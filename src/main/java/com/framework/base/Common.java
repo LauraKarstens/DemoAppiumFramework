@@ -204,4 +204,20 @@ public class Common {
         return false;
     }
 
+    //Clicking on one element and dragging to another element
+    public static void clickAndDrag(WebElement startingElement, WebElement endingElement){
+
+        //Getting the center of the starting object and ending object and setting coordinates
+        int startX = startingElement.getLocation().getX() + (startingElement.getSize().getWidth() / 2);
+        int startY = startingElement.getLocation().getY() + (startingElement.getSize().getHeight() / 2);
+        int endX = endingElement.getLocation().getX() + (endingElement.getSize().getWidth() / 2);
+        int endY = endingElement.getLocation().getY() + (endingElement.getSize().getHeight() / 2);
+
+        //Using TouchAction to press, hold, move to a second object and release based on provided coordinates
+        new TouchAction(driver)
+                .press(PointOption.point(startX,startY))
+                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000)))
+                .moveTo(PointOption.point(endX, endY))
+                .release().perform();
+    }
 }

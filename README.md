@@ -12,15 +12,18 @@
 ##### Example Test Frameworks with several test examples. Also playform specific
 The following branches all contain several example tests. The tests include a variety of interactions with different kinds of applications. The tests included on each branch are listed. It may be worth checking out the web examples (even if you are automating mobile) because something about the test logic could be helpful. 
 
-*androidTesting*
-1. Checking for the presence of every element using a data provider (looping)
-2. Checking the function of every button on a page using a data provider (includes swiping/scrolling)
-3. Filling a text entry dialog
-4. Checking a Web View on a hybrid app and performing actions in that web view
-5. Changing the time on an analog clock (clicking and dragging)
-6. Using a search bar to filter results and verifying those results
-7. Checking the state change of a button when being used (e.g. play/pause button on a video player)
-8. Using a calendar/date picker to dynamically pick a date based on what is already selected
+*androidTesting* <br>
+Each test below includes a form of verification/assertion <br>
+- Using a data provider to loop through a test <br>
+- Checking for a list of buttons in a view and testing function <br>
+- Swiping/Scrolling <br>
+- Filling a text entry dialog <br>
+- Testing a Web View on a hybrid app <br>
+- Clicking and Dragging <br>
+- Using an Analog Clock <br>
+- Using a search bar and verifying results <br>
+- Button state changes when being used (e.g. play/pause button on a video player) <br>
+- Dynamically selecting elements on a calendar/date picker based on the current date <br>
 
 #### Notes:
 

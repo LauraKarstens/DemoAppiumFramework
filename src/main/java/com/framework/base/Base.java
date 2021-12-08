@@ -17,7 +17,7 @@ public class Base {
 //    The driver can also be called from any Class that extends Base
     public static AppiumDriver driver;
 
-// The below objects can be used in your code to access methods from the respective Classes from any Class that extends Base.
+// The below objects can be used in your code to access methods from the respective Classes. They can be accessed from any Class that extends Base.
 // (e.g. assertions, page objects and commonly used methods)
     public static AssertionLogging softAssert = new AssertionLogging();
     public static AppPageObjects android = new AppPageObjects();
@@ -69,8 +69,6 @@ public class Base {
         //EXPERIMENTAL and not needed potentially
         capabilities.setCapability("appium:chromeOptions", ImmutableMap.of("w3c", false));
 
-        //TODO example of interacting with existing apps
-
         //Setting up the driver
         String address=(String) prop.get("IP");
         driver = new AppiumDriver(new URL(address), capabilities);
@@ -78,4 +76,3 @@ public class Base {
         return driver;
     }
 }
-

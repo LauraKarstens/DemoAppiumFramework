@@ -6,7 +6,7 @@ import java.net.MalformedURLException;
 
 public class BrowserPageObjects extends Base {
 
-    public static WebElement getHomeButton() throws MalformedURLException {
+    public static WebElement getHomeButton() {
         //Providing the xpath as a string
         String xpath = "//icon[@class='nav-logo lazy-loaded']";
         //Waiting for the presence of the desired element
@@ -17,7 +17,7 @@ public class BrowserPageObjects extends Base {
         return homeButton;
     }
 
-    public static String getWelcomeMessage() throws MalformedURLException {
+    public static String getWelcomeMessage() {
         String xpath = "//h1[@class='hero__headline hero__headline--basic']";
         common.waitForElement(driver.findElementByXPath(xpath), 10, 1);
         WebElement welcomeMessage = driver.findElementByXPath(xpath);

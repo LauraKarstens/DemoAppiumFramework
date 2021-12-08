@@ -15,7 +15,7 @@
 <!--            <package name="package name"/>-->
 <!--        </packages>-->
         <classes>
-            <class name="App.LandingPageTests">
+            <class name="App.ExampleMobileTests">
                 <!--               <methods>-->
                 <!--                   <include name="checkButtonFunction"></include>-->
                 <!--                   <exclude name="checkWebView"></exclude>-->

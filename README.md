@@ -11,27 +11,27 @@ I recommend checking the README files for each platform branch to find platform 
 
 ### 'Empty Frameworks' with a placeholder test: 
 #### androidFramework
-    For testing on Android Apps, Hybrid Android Apps and Android Mobile Browsers (Chrome, Samsung Internet Browser) <br>
+     For testing on Android Apps, Hybrid Android Apps and Android Mobile Browsers (Chrome, Samsung Internet Browser)
 #### iOSFramework
-    For testing on iOS Apps, Hybrid iOS Apps and Mobile Safari <br>
+     For testing on iOS Apps, Hybrid iOS Apps and Mobile Safari
 #### webFramework
-    For testing on desktop browsers (Chrome, Safari, Edge, Firefox) <br>
+     For testing on desktop browsers (Chrome, Safari, Edge, Firefox)
 
 ### Example Test Frameworks with several test examples:
 The following branches all contain several example tests. The tests include a variety of interactions with different kinds of applications. The tests included on each branch are listed. It may be worth checking out the web examples (even if you are automating mobile) because something about the test logic could be helpful. 
 
 #### androidTesting <br>
-Each test below includes a form of verification/assertion <br>
-- Using a data provider to loop through a test <br>
-- Checking for a list of buttons in a view and testing function <br>
-- Swiping/Scrolling <br>
-- Filling a text entry dialog <br>
-- Testing a Web View on a hybrid app <br>
-- Clicking and Dragging <br>
-- Using an Analog Clock <br>
-- Using a search bar and verifying results <br>
-- Button state changes when being used (e.g. play/pause button on a video player) <br>
-- Dynamically selecting elements on a calendar/date picker based on the current date <br>
+     Each test below includes a form of verification/assertion <br>
+     - Using a data provider to loop through a test <br>
+     - Checking for a list of buttons in a view and testing function <br>
+     - Swiping/Scrolling <br>
+     - Filling a text entry dialog <br>
+     - Testing a Web View on a hybrid app <br>
+     - Clicking and Dragging <br>
+     - Using an Analog Clock <br>
+     - Using a search bar and verifying results <br>
+     - Button state changes when being used (e.g. play/pause button on a video player) <br>
+     - Dynamically selecting elements on a calendar/date picker based on the current date <br>
 
 #### Notes:
 

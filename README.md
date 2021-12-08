@@ -80,8 +80,8 @@ If you are unfamiliar with the page object model check out this link: [click her
 2. Open the emulator. It must be open for Appium to recognize it. If a physical device is plugged in it will likely use that over the emulator.
 3. Ensure the Appium server is running
 4. You should now be able to run tests. It should default to running using TestNG. <br>
-   a. You can run single tests or classes by right clicking the test/class and selecting "Run" 
-   b. You can run a whole suite of tests by right clicking the "mobile.xml" or "browser.xml" file and clicking "run". The testng file will executes all tests as detailed within the file. This is the best way to execute your entire suite of tests as well as particular groups, packages, classes etc. 
+   a. You can run single tests or classes by right clicking the test/class and selecting "Run" <br>
+   b. You can run a whole suite of tests by right clicking the "mobile.xml" or "browser.xml" file and clicking "run". The testng file will executes all tests as detailed within the file. This is the best way to execute your entire suite of tests as well as particular groups, packages, classes etc. <br>
 6. Test output will appear in the IDE as well as the Appium Server logs. 
 
 ### Test Reports

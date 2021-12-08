@@ -21,17 +21,17 @@ I recommend checking the README files for each platform branch to find platform 
 The following branches all contain several example tests. The tests include a variety of interactions with different kinds of applications. The tests included on each branch are listed. It may be worth checking out the web examples (even if you are automating mobile) because something about the test logic could be helpful. 
 
 #### androidTesting <br>
-     Each test below includes a form of verification/assertion <br>
-     - Using a data provider to loop through a test <br>
-     - Checking for a list of buttons in a view and testing function <br>
-     - Swiping/Scrolling <br>
-     - Filling a text entry dialog <br>
-     - Testing a Web View on a hybrid app <br>
-     - Clicking and Dragging <br>
-     - Using an Analog Clock <br>
-     - Using a search bar and verifying results <br>
-     - Button state changes when being used (e.g. play/pause button on a video player) <br>
-     - Dynamically selecting elements on a calendar/date picker based on the current date <br>
+     Each test below includes a form of verification/assertion
+     - Using a data provider to loop through a test
+     - Checking for a list of buttons in a view and testing function
+     - Swiping/Scrolling
+     - Filling a text entry dialog
+     - Testing a Web View on a hybrid app
+     - Clicking and Dragging 
+     - Using an Analog Clock 
+     - Using a search bar and verifying results 
+     - Button state changes when being used (e.g. play/pause button on a video player) 
+     - Dynamically selecting elements on a calendar/date picker based on the current date 
 
 #### Notes:
 

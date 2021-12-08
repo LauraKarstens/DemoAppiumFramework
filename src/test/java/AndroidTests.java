@@ -6,8 +6,6 @@ import org.testng.annotations.*;
 
 public class AndroidTests extends Base {
 
-    //TODO test screenshots
-
     @Test (groups= {"smoke"}, enabled = true, dataProvider= "ClickTestData", description = "Both buttons on the home screen lead to the correct page")
     public void checkButtonFunction(String buttonName, String desc, String buttonText, String message) throws InterruptedException, MalformedURLException {
         //Searching for an element and clicking on it, based on the xpath which is partially supplied by the data provider

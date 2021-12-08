@@ -5,6 +5,8 @@
 This branch includes the appium framework for Android Apps and Browsers. Please see the README on the main branch for installation and setup instructions: 
 [Here](https://github.com/madison-vincent/DemoAppiumFramework#readme)
 
+[Here](https://github.com/madison-vincent/DemoAppiumFramework/tree/androidTesting) is a branch that has many example tests and interactions for Android
+
 ### Project Outline
 
 [main > java > com > framework > base] This is where the majority of the framework lives. The Base class is where we set up the Appium Driver and give Appium all of the settings it needs to run automation on a mobile app. The BrowserBase class is where we set up the Driver and settings for mobile browsers. The Common class contains methods that are commonly used in the project, but not specific to a certain area or class. 
@@ -61,7 +63,7 @@ If you are unfamiliar with the page object model check out this link: [click her
 
 ### Identifying Elements
 
-1. Use uiautomatorviewer to locate elements on the device when using an *app*. You can open it by typing 'uiautomatorviewer' into the terminal. NOTE: Make sure the appium server is off before opening the uiautomatorviewer, or it wont connect to the device. You can look up ways to use this information to create the xpath but typically it follows this format:  //tagName[@attribute=’value’] e.g. //textView[@id='idvalue']
+1. Use uiautomatorviewer to locate elements on the device when using an *app*. You can open it by typing 'uiautomatorviewer' into the terminal. NOTE: Make sure the appium server is off before opening the uiautomatorviewer, or it wont connect to the device. You can look up ways to use this information to create the xpath but typically it follows this format:  //android.widget.tagName[@attribute=’value’] e.g. //android.widget.textView[@id='idvalue']
 2. To locate elements on the device in WebViews/Browser, use the following URL for Chrome: chrome://inspect/#devices . Other browsers typically have their own remote debugger as well. In this example, you will see devices listed and will be able to inspect them when they have an instance of chrome running. (Either a WebView or a browser itself). You can now select elements to view their xpath. [Here](https://devhints.io/xpath) is a great cheatsheet for writing xpaths.
 
 ### Test Body
@@ -78,8 +80,8 @@ If you are unfamiliar with the page object model check out this link: [click her
 2. Open the emulator. It must be open for Appium to recognize it. If a physical device is plugged in it will likely use that over the emulator.
 3. Ensure the Appium server is running
 4. You should now be able to run tests. It should default to running using TestNG. <br>
-   a. You can run single tests or classes by right clicking the test/class and selecting "Run" 
-   b. You can run a whole suite of tests by right clicking the "mobile.xml" or "browser.xml" file and clicking "run". The testng file will executes all tests as detailed within the file. This is the best way to execute your entire suite of tests as well as particular groups, packages, classes etc. 
+   a. You can run single tests or classes by right clicking the test/class and selecting "Run" <br>
+   b. You can run a whole suite of tests by right clicking the "mobile.xml" or "browser.xml" file and clicking "run". The testng file will executes all tests as detailed within the file. This is the best way to execute your entire suite of tests as well as particular groups, packages, classes etc. <br>
 6. Test output will appear in the IDE as well as the Appium Server logs. 
 
 ### Test Reports

@@ -12,8 +12,6 @@ import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 import pageObjects.AppPageObjects;
 
-
-
 public class Base {
     public static Common common = new Common();
     public static AssertionLogging softAssert = new AssertionLogging();

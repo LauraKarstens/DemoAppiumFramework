@@ -4,7 +4,10 @@
 
 ## Branching 
 
-Every branch has a specific README file that I recommend looking at
+I recommend checking the README files for each platform branch to find platform specific information on writing and running tests: <br>
+[Click here for Android](https://github.com/madison-vincent/DemoAppiumFramework/blob/androidFramework/README.md) <br>
+[Click here for iOS](https://github.com/madison-vincent/DemoAppiumFramework/tree/iOSFramework#readme) <br>
+[Click here for Desktop/Web](https://github.com/madison-vincent/DemoAppiumFramework/tree/webFramework#readme)
 
 ### 'Empty Frameworks' with a placeholder test: 
 #### androidFramework

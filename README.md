@@ -5,17 +5,17 @@
 ## Branching 
 
 #### 'Empty Frameworks' with a placeholder test: 
-##### androidFramework ##### 
+##### androidFramework
 For testing on Android Apps, Hybrid Android Apps and Android Mobile Browsers (Chrome, Samsung Internet Browser) <br>
-##### iOSFramework ##### 
+##### iOSFramework
 For testing on iOS Apps, Hybrid iOS Apps and Mobile Safari <br>
-##### webFramework #####
+##### webFramework
 For testing on desktop browsers (Chrome, Safari, Edge, Firefox) <br>
 
 #### Example Test Frameworks with several test examples:
 The following branches all contain several example tests. The tests include a variety of interactions with different kinds of applications. The tests included on each branch are listed. It may be worth checking out the web examples (even if you are automating mobile) because something about the test logic could be helpful. 
 
-##### androidTesting ##### <br>
+##### androidTesting <br>
 Each test below includes a form of verification/assertion <br>
 - Using a data provider to loop through a test <br>
 - Checking for a list of buttons in a view and testing function <br>

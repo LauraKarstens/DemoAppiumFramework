@@ -60,7 +60,7 @@ public class Base {
         //Telling Appium where to find the application for testing
         capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-
+        capabilities.setCapability(MobileCapabilityType.FULL_RESET, "false");
         //Setting up the driver
         String address=(String) prop.get("IP");
         AppiumDriver driver = new AppiumDriver(new URL(address), capabilities);

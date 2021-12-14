@@ -186,6 +186,7 @@ public class Common extends Base {
         for (String context : contexts) {
             System.out.println(context);
             if (context.contains("WEBVIEW")) {
+                System.out.println("Switching to Web context");
                 driver.context(context);
                 return true;
             }

@@ -1,8 +1,6 @@
 import com.framework.base.Base;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.testng.annotations.*;
-
-import java.io.IOException;
+import pageObjects.AppPageObjects;
 
 public class iOSTests extends Base {
 
@@ -41,6 +39,7 @@ public class iOSTests extends Base {
         return data;
     }
 
+    //This tests an alert pop up
     @Test(description = "Testing an alert / pop up")
     public  void alertTest(){
         //Clicking the Alert Views button
@@ -59,6 +58,7 @@ public class iOSTests extends Base {
         softAssert.assertAll();
     }
 
+    //Testing that we can fill a text entry dialog
     @Test(description = "Filling a text entry dialog")
     public  void textEntryTest(){
         //Clicking the Alert Views button
@@ -115,9 +115,83 @@ public class iOSTests extends Base {
         softAssert.assertAll();
     }
 
+    //This test handles switching to web view, doing an assertion and switching back to native view when testing hybrid apps
+    @Test(description = "Checking that the web view loads as expected on a hybrid application", enabled = false)
+    public void webViewTest() {
 
-    //Date Picker
-    //WebView
-    //TODO look into multiple app  installs and WebDriverAgent?
+        /*NOTE: This test WILL NOT run and is therefore disabled. This is due to issues in the app code that prevent us from inspecting the web view
+                so that we can identify elements. I wanted to leave the example here for general structure and an idea of switching contexts
+                on a hybrid app. */
 
+        //Clicking on WebView
+        ios.getWebViewButton().click();
+        //Switching to the WebView context
+        common.switchToWebContext();
+
+        //Assertion on the text in the web view to make sure it works as expected
+        softAssert.assertTrue(ios.getWebViewText().isDisplayed(), "The web view text is displayed");
+
+        //Navigating back to the Native App
+        driver.navigate().back();
+        //Switching back to the Native context
+        common.switchToNativeContext();
+
+        //Assertion on landing page button to check that we are back in the native app view
+        softAssert.assertTrue(ios.getWebViewButton().isDisplayed(), "We are on the landing page (Web view button is present)");
+
+        softAssert.assertAll();
+    }
+
+    //Using a calendar/date picker to change the date dynamically based on the currently selected date (today)
+    @Test(description = "Using a calendar/date picker to change the date dynamically")
+    public void datePickerTest() {
+
+       /* NOTE: This test will fail on the last day of the month due to the app design being less than desirable.
+                The app does not allow the user to select a date in the past which we would not typically have in an app.
+                If we did have that scenario we would want to include logic that picks the next month if the new date is in the next month. */
+
+        //Clicking Views button
+        ios.getDatePickerButton().click();
+        //Clicking Date Widgets button
+        ios.getCalendarButton().click();
+
+        //Selecting a new date dynamically, based on the current date (which is always today's date)
+        //This happens in the below page object method getTomorrowsDateButton()
+        ios.getTomorrowsDateButton().click();
+        //clicking OK to save the new date
+        ios.getEmptySpace();
+
+        //Verifying that the date has been changed by checking that the element text starts with the correct date
+        //The string we verify against is also dynamically generated in getTomorrowsDateString()
+        softAssert.assertTrue(ios.getCalendarButton().getText().contains(AppPageObjects.getTomorrowsDateString()), "The date has been changed to tomorrow");
+
+        //Returning to the landing page
+        driver.navigate().back();
+        driver.navigate().back();
+        driver.navigate().back();
+
+        //Assertion
+        softAssert.assertAll();
+    }
+
+    //This test uses click and drag to change a segmented control, and verifies which control is currently selected
+    @Test(description = "Segmented controls can be changed as expected")
+    public void controlChangeTest() {
+
+        //Click Segmented Controls button
+        ios.getSegmentedControlsButton().click();
+
+        //Click and drag from the Search element to the Tools element
+        common.clickAndDrag(ios.getSearchControlButton(),ios.getToolsControlButton());
+
+        //Verify that the 'tools' element now has a value of 1. This is how the dev flagged the selected control.
+        //I found this out through experimentation and comparison of the xpaths between selected and non-selected elements
+        //We are searching for the control with the value of 1 and then checking that it is the element we expected by getting its name
+        softAssert.assertEquals(ios.getSelectedControl().getAttribute("name"), "Tools", "The control was changed as expected");
+
+        //Returning to the landing page
+        driver.navigate().back();
+
+        softAssert.assertAll();
+    }
 }

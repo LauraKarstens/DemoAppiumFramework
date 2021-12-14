@@ -8,7 +8,6 @@ import java.util.Properties;
 import com.framework.listeners.AssertionLogging;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 import pageObjects.AppPageObjects;
 
@@ -53,18 +52,18 @@ public class Base {
         //Providing the UDID for the device/simulator as required
         capabilities.setCapability(MobileCapabilityType.UDID, udid);
         //Telling Appium that we are using XCUI Test via XCode to run test automation on the app
-        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
+        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
         //This defines how long Appium should wait for a new command from the client before assuming the client ended the session
         //Set to 0 to disable the timeout, but this isn't recommended as it allows automation sessions to continue indefinitely
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,30);
         //Telling Appium where to find the application for testing
         capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-        capabilities.setCapability(MobileCapabilityType.FULL_RESET, "false");
+        capabilities.setCapability(MobileCapabilityType.NO_RESET, "true");
+
         //Setting up the driver
         String address=(String) prop.get("IP");
         AppiumDriver driver = new AppiumDriver(new URL(address), capabilities);
-        //TODO should this be appium driver?
         return driver;
     }
 }

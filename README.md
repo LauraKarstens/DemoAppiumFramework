@@ -9,18 +9,18 @@ I recommend checking the README files for each platform branch to find platform 
 [Click here for iOS](https://github.com/madison-vincent/DemoAppiumFramework/tree/iOSFramework#readme) <br>
 [Click here for Desktop/Web](https://github.com/madison-vincent/DemoAppiumFramework/tree/webFramework#readme)
 
-### 'Empty Frameworks' with a placeholder test: 
-#### androidFramework
+### 'Empty Frameworks' with a placeholder test : 
+#### androidFramework [here](https://github.com/madison-vincent/DemoAppiumFramework/tree/androidFramework)
      For testing on Android Apps, Hybrid Android Apps and Android Mobile Browsers (Chrome, Samsung Internet Browser)
-#### iOSFramework
+#### iOSFramework [here](https://github.com/madison-vincent/DemoAppiumFramework/tree/iOSFramework)
      For testing on iOS Apps, Hybrid iOS Apps and Mobile Safari
-#### webFramework
+#### webFramework [here](https://github.com/madison-vincent/DemoAppiumFramework/tree/webFramework)
      For testing on desktop browsers (Chrome, Safari, Edge, Firefox)
 
 ### Example Test Frameworks with several test examples:
 The following branches all contain several example tests. The tests include a variety of interactions with different kinds of applications. The tests included on each branch are listed. It may be worth checking out the web examples (even if you are automating mobile) because something about the test logic could be helpful. 
 
-#### androidTesting <br>
+#### androidTesting [here](https://github.com/madison-vincent/DemoAppiumFramework/tree/androidTesting) <br>
      Each test below includes a form of verification/assertion
      - Using a data provider to loop through a test
      - Checking for a list of buttons in a view and testing function
@@ -33,7 +33,7 @@ The following branches all contain several example tests. The tests include a va
      - Button state changes when being used (e.g. play/pause button on a video player) 
      - Dynamically selecting elements on a calendar/date picker based on the current date 
      
-#### iOSTesting <br>
+#### iOSTesting [here](https://github.com/madison-vincent/DemoAppiumFramework/tree/iOSTesting) <br>
      Each test below includes a form of verification/assertion
      - Using a data provider to loop through a test
      - Checking for a list of buttons in a view

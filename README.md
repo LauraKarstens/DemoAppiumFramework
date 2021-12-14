@@ -32,6 +32,17 @@ The following branches all contain several example tests. The tests include a va
      - Using a search bar and verifying results 
      - Button state changes when being used (e.g. play/pause button on a video player) 
      - Dynamically selecting elements on a calendar/date picker based on the current date 
+     
+#### iOSTesting <br>
+     Each test below includes a form of verification/assertion
+     - Using a data provider to loop through a test
+     - Checking for a list of buttons in a view
+     - Verifying an alert/pop up
+     - Enterting text in a text entry dialog
+     - Incrementing a counter with +/- buttons
+     - Web View testing on a hybrid app
+     - Dynamically selecting elements on a calendar/date picker based on the current date 
+     - Using Click and Drag with sliders to change controls
 
 #### Notes:
 

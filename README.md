@@ -56,6 +56,8 @@ For anyone unfamiliar with automation, I have added detailed comments to nearly 
 
 ### Requirements:
 
+**NOTE: Advanced setup instructions exist [here](https://confluence.uhub.biz/display/WTMDENDE/Appium+Setup+Guide) and a summary is found below:
+
 1. Typical IntelliJ setup for TestNG including Java, Maven, Selenium, TestNG, Node.js (dependencies should already be in the pom.xml file) etc. <br>
     a. Currently the pom.xml file uses the following versions: Appium 7.5.1, Selenium 3.141.59, TestNG 7.4.0, Maven Surefire 3.0.0-M5 <br>
     b. If you have newer versions, update the version numbers in the pom.xml. Then right click on the pom.xml > Maven > Reload Project to load the dependencies 

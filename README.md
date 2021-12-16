@@ -47,7 +47,7 @@ If you are unfamiliar with the page object model check out this link: [click her
 
 ### Random Notes:
 
-- There are 3 example tests already in the framework that you can use as an outline for writing tests
+- There are example tests already in the framework that you can use as an outline for writing tests
 - When writing tests you will focus almost exclusively on the Test classes and the Page Objects. 
 - The "Common" class also contains commonly used methods that you can utilize anywhere in your test classes. e.g. swipe
 - Android's uiautomatorviewer typically does not work with the Appium server running. Stop the server before opening uiautomatorviewer

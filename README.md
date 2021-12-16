@@ -117,6 +117,8 @@ If you plan on testing in browsers (NOT Web Views) or on dekstop browser, take t
 
 ### Writing Tests
 
+I suggest writing tests in a separate "develop" branch. Once you are sure it all works as expected you can open a PR for others to review or merge it into the branch of your choosing. 
+
 I recommend checking the README files for each platform branch to find platform specific information on writing and running tests: <br>
 [Click here for Android](https://github.com/madison-vincent/DemoAppiumFramework/blob/androidFramework/README.md) <br>
 [Click here for iOS](https://github.com/madison-vincent/DemoAppiumFramework/tree/iOSFramework#readme) <br>

@@ -1,5 +1,3 @@
-### NOTE: Framework and README are incomplete and are in the process of being restructured
-
 # Appium Framework
 
 ## Branching 
